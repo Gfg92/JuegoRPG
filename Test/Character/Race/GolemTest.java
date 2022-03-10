@@ -1,11 +1,14 @@
 package Character.Race;
 
-import Character.Stat.*;
+import Character.Stat.Constitution;
+import Character.Stat.Dexterity;
+import Character.Stat.Stat;
+import Character.Stat.Strength;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class HumanTest {
+class GolemTest {
 
     Stat stat;
     Race race;
@@ -13,21 +16,21 @@ class HumanTest {
     @Test
     void modifierConstitution() {
         stat = new Constitution(0);
-        race = new Human();
-        assertEquals(2, race.modifier(stat));
+        race = new Golem();
+        assertEquals(4, race.modifier(stat));
     }
 
     @Test
     void modifierStrength() {
         stat = new Strength(0);
-        race = new Human();
-        assertEquals(2, race.modifier(stat));
+        race = new Golem();
+        assertEquals(4, race.modifier(stat));
     }
 
     @Test
     void modifierDexterity() {
         stat = new Dexterity(0);
-        race = new Human();
-        assertEquals(1, race.modifier(stat));
+        race = new Golem();
+        assertEquals(-3, race.modifier(stat));
     }
 }
