@@ -7,6 +7,6 @@ public class Strength extends Stat {
 
     @Override
     public String toString() {
-        return "Strength: " + super.toString();
+        return super.toString();
     }
 }

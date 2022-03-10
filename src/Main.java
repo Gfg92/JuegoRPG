@@ -1,4 +1,3 @@
-package Character;
 
 import Character.Race.Elf;
 import Character.Race.Human;
@@ -23,7 +22,6 @@ public class Main {
         Intelligence intelligence = new Intelligence(0);
 
 
-
         Human human = new Human();
         System.out.println(human.modifier(strength) + human.modifier(constitution) + human.modifier(dexterity));
 
@@ -34,7 +32,7 @@ public class Main {
         System.out.println(elf.modifier(dexterity) + elf.modifier(intelligence) + elf.modifier(constitution));
 
 
-
-
     }
 }
+
+
