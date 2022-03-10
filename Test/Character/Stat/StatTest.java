@@ -14,18 +14,20 @@ class StatTest {
     }
 
     @Test
-    void getValue() {
+    void get_Value_Stat() {
+        int esperado = 2;
+        assertEquals(esperado,stat.getValue());
     }
 
     @Test
-    void increase() {
+    void increase_value_by1() {
         int actualValue = stat.getValue();
         stat.increase();
         assertEquals(actualValue + 1, stat.getValue());
     }
 
     @Test
-    void decrease() {
+    void decrease_value_by1() {
         int actualValue = stat.getValue();
         stat.decrease();
         assertEquals(actualValue - 1, stat.getValue());
