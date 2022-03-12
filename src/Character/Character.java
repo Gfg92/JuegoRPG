@@ -1,6 +1,8 @@
 package Character;
 
 import Character.Job.Job;
+import Character.Race.Elf;
+import Character.Race.Golem;
 import Character.Race.Race;
 import Character.Stat.*;
 
@@ -41,7 +43,7 @@ public class Character {
     // Metodos
     // (valor base Dexterity + bonif. raza + bonif. profesion) * 2
     public double velocity() {
-        return (dexterity + race + job)*2;
+        return (dexterity.getValue() +;
     }
     // (valor base Strength + bonif. raza + bonif. profesion) * 2
     public double power(){
