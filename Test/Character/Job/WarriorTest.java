@@ -1,7 +1,5 @@
 package Character.Job;
 
-import Character.Race.Elf;
-import Character.Race.Race;
 import Character.Stat.*;
 import org.junit.jupiter.api.Test;
 
