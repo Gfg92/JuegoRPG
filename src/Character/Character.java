@@ -41,22 +41,22 @@ public class Character {
     // Metodos
     // (valor base Dexterity + bonif. raza + bonif. profesion) * 2
     public double velocity() {
-        return (dexterity.getValue() + getRace().modifier() + getJob().modifier()) * 2;
+        return (dexterity.getValue() + getRace().modifier(dexterity) + getJob().modifier(dexterity)) * 2;
     }
 
     // (valor base Strength + bonif. raza + bonif. profesion) * 2
     public double power() {
-        return (strength.getValue() + getRace().modifier() + getJob().modifier()) * 2;
+        return (strength.getValue() + getRace().modifier(strength) + getJob().modifier(strength)) * 2;
     }
 
     // (valor base Intelligence + bonif. raza + bonif. profesion) * 2
     public double magic() {
-        return (intelligence.getValue() + getRace() + getJob().modifier()) * 2;
+        return (intelligence.getValue() + getRace().modifier(intelligence) + getJob().modifier(intelligence)) * 2;
     }
 
     // (valor base Constitution + bonif. raza + bonif. profesion) * 25
     public double health() {
-        return (constitution.getValue() + getRace().modifier() + getJob().modifier()) * 25;
+        return (constitution.getValue() + getRace().modifier(constitution) + getJob().modifier(constitution)) * 25;
     }
 
     // Imprimir
