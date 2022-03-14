@@ -16,5 +16,4 @@ public abstract class Race {
         return super.toString();
     }
 
-
 }

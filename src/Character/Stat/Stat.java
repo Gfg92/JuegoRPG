@@ -25,9 +25,7 @@ public abstract class Stat {
     //Imprimir
     @Override
     public String toString() {
-        return "Stat{" +
-                "value=" + value +
-                '}';
+        return Integer.toString(value);
     }
 
 
