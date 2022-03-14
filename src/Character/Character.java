@@ -4,7 +4,7 @@ import Character.Job.Job;
 import Character.Race.Race;
 import Character.Stat.*;
 
-public class Character {
+public class Character implements IDamageable {
     // Atributos
     private String name;
     private Race race;
@@ -59,6 +59,47 @@ public class Character {
         return (constitution.getValue() + getRace().modifier(constitution) + getJob().modifier(constitution)) * 25;
     }
 
+
+    // Metodos de la interface
+    //Devuelve la vida máxima del personaje
+    @Override
+    public double maxHealth() {
+        return 0;
+    }
+
+    //Devuelve el valor de vida actual
+    @Override
+    public double currentHealth() {
+        return health();
+    }
+
+    //Devuelve true si el daño es mayor o igual a la vida
+    @Override
+    public boolean isDead() {
+        int damage = 0;
+        if (currentHealth() < damage) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    //Aumenta el daño recibido
+    @Override
+    public void receivesDamage(double amount) {
+        double danyo = currentHealth() - amount;
+
+        System.out.println(name + " received " + amount + " damage. Health:" + danyo + "/" + "250");
+    }
+
+    //Disminuye el daño recibido. El daño mínimo es 0
+    @Override
+    public void heals(double amount) {
+        double danyo = currentHealth() + amount;
+        System.out.println(name + " healed " + amount + " life. Health:" + danyo + "/" + "250");
+    }
+
+
     // Imprimir
     @Override
     public String toString() {
@@ -72,6 +113,8 @@ public class Character {
                 ", Velocity: " + velocity() +
                 ", Power: " + power() +
                 ", Magic: " + magic() +
-                " and Helath: " + health();
+                " and Health: " + health();
     }
+
+
 }
