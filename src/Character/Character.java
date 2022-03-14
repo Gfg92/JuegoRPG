@@ -56,7 +56,7 @@ public class Character implements IDamageable {
     }
 
     // Metodos de la interface
-    //Devuelve la vida máxima del personaje
+    // Devuelve la vida máxima del personaje
     @Override
     public double maxHealth() {
         return (constitution.getValue() + getRace().modifier(constitution) + getJob().modifier(constitution)) * 25;
@@ -92,7 +92,6 @@ public class Character implements IDamageable {
         damage -= amount;
         System.out.println(name + " healed " + amount + " life. Health:" + currentHealth() + "/" + maxHealth());
     }
-
 
     // Imprimir
     @Override
