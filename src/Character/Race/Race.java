@@ -13,7 +13,7 @@ public abstract class Race {
 
     @Override
     public String toString() {
-        return super.toString();
+        return getClass().getSimpleName();
     }
 
 }

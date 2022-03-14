@@ -13,6 +13,7 @@ public class Character implements IDamageable {
     private Dexterity dexterity = new Dexterity(5);
     private Constitution constitution = new Constitution(5);
     private Intelligence intelligence = new Intelligence(5);
+    private double damage;
 
     //Getters y Setters
     public String getName() {
@@ -54,30 +55,23 @@ public class Character implements IDamageable {
         return (intelligence.getValue() + getRace().modifier(intelligence) + getJob().modifier(intelligence)) * 2;
     }
 
-    // (valor base Constitution + bonif. raza + bonif. profesion) * 25
-    public double health() {
-        return (constitution.getValue() + getRace().modifier(constitution) + getJob().modifier(constitution)) * 25;
-    }
-
-
     // Metodos de la interface
     //Devuelve la vida máxima del personaje
     @Override
     public double maxHealth() {
-        return 0;
+        return (constitution.getValue() + getRace().modifier(constitution) + getJob().modifier(constitution)) * 25;
     }
 
     //Devuelve el valor de vida actual
     @Override
     public double currentHealth() {
-        return health();
+        return maxHealth() - damage;
     }
 
     //Devuelve true si el daño es mayor o igual a la vida
     @Override
     public boolean isDead() {
-        int damage = 0;
-        if (currentHealth() < damage) {
+        if (currentHealth() <= damage) {
             return true;
         } else {
             return false;
@@ -87,16 +81,16 @@ public class Character implements IDamageable {
     //Aumenta el daño recibido
     @Override
     public void receivesDamage(double amount) {
-        double danyo = currentHealth() - amount;
+        damage += amount;
 
-        System.out.println(name + " received " + amount + " damage. Health:" + danyo + "/" + "250");
+        System.out.println(name + " received " + amount + " damage. Health:" + currentHealth() + "/" + maxHealth());
     }
 
     //Disminuye el daño recibido. El daño mínimo es 0
     @Override
     public void heals(double amount) {
-        double danyo = currentHealth() + amount;
-        System.out.println(name + " healed " + amount + " life. Health:" + danyo + "/" + "250");
+        damage -= amount;
+        System.out.println(name + " healed " + amount + " life. Health:" + currentHealth() + "/" + maxHealth());
     }
 
 
@@ -113,7 +107,7 @@ public class Character implements IDamageable {
                 ", Velocity: " + velocity() +
                 ", Power: " + power() +
                 ", Magic: " + magic() +
-                " and Health: " + health();
+                " and Health: " + maxHealth();
     }
 
 

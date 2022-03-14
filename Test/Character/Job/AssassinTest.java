@@ -5,8 +5,7 @@ import Character.Stat.Dexterity;
 import Character.Stat.Stat;
 import Character.Stat.Strength;
 import org.junit.jupiter.api.Test;
-
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AssassinTest {
     Stat stat;
