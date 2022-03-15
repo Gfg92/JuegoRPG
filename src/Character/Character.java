@@ -3,6 +3,7 @@ package Character;
 import Character.Job.Job;
 import Character.Race.Race;
 import Character.Stat.*;
+import Item.Food.IConsumable;
 
 public class Character implements IDamageable {
     // Atributos
@@ -55,7 +56,7 @@ public class Character implements IDamageable {
         return (intelligence.getValue() + getRace().modifier(intelligence) + getJob().modifier(intelligence)) * 2;
     }
 
-    // Metodos de la interface
+    // Metodos de la interface IDamageable
     // Devuelve la vida máxima del personaje
     @Override
     public double maxHealth() {
@@ -93,6 +94,16 @@ public class Character implements IDamageable {
         System.out.println(name + " healed " + amount + " life. Health:" + currentHealth() + "/" + maxHealth());
     }
 
+    // Metodos de la interface IConsumable
+    public void consumes(IConsumable consumable){
+        System.out.println(name + " consumed: " + consumable);
+
+    }
+
+
+
+
+
     // Imprimir
     @Override
     public String toString() {
@@ -108,6 +119,7 @@ public class Character implements IDamageable {
                 ", Magic: " + magic() +
                 " and Health: " + maxHealth();
     }
+
 
 
 }

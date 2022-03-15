@@ -86,15 +86,26 @@ class CharacterTest {
 
     @Test
     void isDead() {
-        double damage = 10;
-        character.isDead();
+        double damage = 9;
+        boolean isDead = damage >= character.currentHealth();
+        assertEquals(isDead, character.isDead());
+
     }
 
     @Test
     void receivesDamage() {
+        double damage = 100;
+        character.receivesDamage(damage);
+        double currentHealth = character.currentHealth();
+        assertEquals(currentHealth, character.currentHealth());
+
     }
 
     @Test
     void heals() {
+        double heals = 100;
+        character.heals(heals);
+        double currentHealth = character.currentHealth();
+        assertEquals(currentHealth, character.currentHealth());
     }
 }
