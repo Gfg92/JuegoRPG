@@ -5,7 +5,7 @@ import Character.Race.Race;
 import Character.Stat.*;
 import Item.Food.IConsumable;
 
-public class Character implements IDamageable {
+public class Character implements IDamageable{
     // Atributos
     private String name;
     private Race race;
@@ -15,6 +15,7 @@ public class Character implements IDamageable {
     private Constitution constitution = new Constitution(5);
     private Intelligence intelligence = new Intelligence(5);
     private double damage;
+
 
     //Getters y Setters
     public String getName() {
@@ -96,9 +97,11 @@ public class Character implements IDamageable {
 
     // Metodos de la interface IConsumable
     public void consumes(IConsumable consumable){
-        System.out.println(name + " consumed: " + consumable);
 
+
+        System.out.println(name + " consumed: " + consumable);
     }
+
 
 
 

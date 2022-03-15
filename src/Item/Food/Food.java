@@ -12,7 +12,7 @@ public abstract class Food implements IConsumable {
         return power;
     }
 
-    public Food(double power, Apple apple, Bread bread, Chicken chicken, Pizza pizza, Vegetables vegetables) {
+    public Food(double power) {
         this.power = power;
         this.apple = apple;
         this.bread = bread;
