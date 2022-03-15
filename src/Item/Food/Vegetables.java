@@ -1,11 +1,8 @@
 package Item.Food;
 
-public class Vegetables extends Food{
-    public Vegetables(double power) {
-        super(power);
+public class Vegetables extends Food {
+    public Vegetables() {
+        super(1);
     }
-    @Override
-    public void consumedBy(Character character) {
 
-    }
 }

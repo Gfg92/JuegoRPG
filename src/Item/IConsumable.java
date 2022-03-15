@@ -1,7 +1,7 @@
-package Item.Food;
+package Item;
+import Character.CharacterPj;
 
 public interface IConsumable {
     //Pasamos el personaje para poder actuar sobre él
-    void consumedBy(Character character);
-
+    void consumedBy(CharacterPj character);
 }

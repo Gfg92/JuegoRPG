@@ -20,7 +20,7 @@ class CharacterTest {
     Dexterity dexterity;
     Constitution constitution;
     Intelligence intelligence;
-    Character character;
+    CharacterPj character;
 
     @BeforeEach
     void setUp() {
@@ -32,7 +32,7 @@ class CharacterTest {
         dexterity = new Dexterity(5);
         constitution = new Constitution(5);
         intelligence = new Intelligence(5);
-        character = new Character("Cadiel", raceMock, jobMock, strength, dexterity, constitution, intelligence);
+        character = new CharacterPj("Cadiel", raceMock, jobMock, strength, dexterity, constitution, intelligence);
     }
 
     @Test

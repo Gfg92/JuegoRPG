@@ -3,9 +3,9 @@ package Character;
 import Character.Job.Job;
 import Character.Race.Race;
 import Character.Stat.*;
-import Item.Food.IConsumable;
+import Item.IConsumable;
 
-public class Character implements IDamageable{
+public class CharacterPj implements IDamageable {
     // Atributos
     private String name;
     private Race race;
@@ -31,7 +31,7 @@ public class Character implements IDamageable{
     }
 
     // Constructor
-    public Character(String name, Race race, Job job, Strength strength, Dexterity dexterity, Constitution constitution, Intelligence intelligence) {
+    public CharacterPj(String name, Race race, Job job, Strength strength, Dexterity dexterity, Constitution constitution, Intelligence intelligence) {
         this.name = name;
         this.race = race;
         this.job = job;
@@ -84,7 +84,10 @@ public class Character implements IDamageable{
     @Override
     public void receivesDamage(double amount) {
         damage += amount;
-
+        if (damage > maxHealth()) {
+            isDead();
+            damage = maxHealth();
+        }
         System.out.println(name + " received " + amount + " damage. Health:" + currentHealth() + "/" + maxHealth());
     }
 
@@ -92,18 +95,17 @@ public class Character implements IDamageable{
     @Override
     public void heals(double amount) {
         damage -= amount;
+        if (damage < 0) {
+            damage = 0;
+        }
         System.out.println(name + " healed " + amount + " life. Health:" + currentHealth() + "/" + maxHealth());
     }
 
     // Metodos de la interface IConsumable
-    public void consumes(IConsumable consumable){
-
-
+    public void consumes(IConsumable consumable) {
         System.out.println(name + " consumed: " + consumable);
+        consumable.consumedBy(this);
     }
-
-
-
 
 
 
@@ -122,7 +124,6 @@ public class Character implements IDamageable{
                 ", Magic: " + magic() +
                 " and Health: " + maxHealth();
     }
-
 
 
 }

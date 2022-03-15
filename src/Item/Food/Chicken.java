@@ -1,12 +1,8 @@
 package Item.Food;
 
 public class Chicken extends Food{
-    public Chicken(double power) {
-        super(power);
+    public Chicken() {
+        super(25);
     }
 
-    @Override
-    public void consumedBy(Character character) {
-
-    }
 }
