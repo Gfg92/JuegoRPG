@@ -125,5 +125,4 @@ public class CharacterPj implements IDamageable {
                 " and Health: " + maxHealth();
     }
 
-
 }
