@@ -1,4 +1,4 @@
-package Item.Food;
+package Item.Potion;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,20 +7,22 @@ import Character.CharacterMock;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FoodTest {
-    Food food;
+class PotionTest {
+
+    Potion potion;
 
     @BeforeEach
     void setUp() {
-        food = new FoodMock(5);
+        potion = new PotionMock(5);
     }
 
     @Test
     void consumedBy() {
         CharacterPj character = new CharacterMock();
         character.receivesDamage(25);
-        character.consumes(food);
+        character.consumes(potion);
         assertEquals(character.currentHealth(), character.maxHealth());
 
     }
+
 }
