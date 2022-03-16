@@ -18,7 +18,7 @@ class FoodTest {
         CharacterPj character = new CharacterMock();
         character.receivesDamage(25);
         character.consumes(food);
-        assertEquals();
+        assertEquals(0, character.currentHealth());
 
     }
 }

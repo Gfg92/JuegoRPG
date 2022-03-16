@@ -14,4 +14,9 @@ public abstract class Food implements IConsumable {
     public void consumedBy(CharacterPj character) {
         character.heals(power);
     }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName();
+    }
 }

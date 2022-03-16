@@ -16,4 +16,9 @@ public abstract class Potion implements IConsumable {
 
     }
 
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName();
+    }
 }
