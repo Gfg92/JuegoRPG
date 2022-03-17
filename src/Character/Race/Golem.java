@@ -16,7 +16,6 @@ public class Golem extends Race{
         } else if (stat instanceof Dexterity){
             valor = -3;
         }
-
         return valor;
     }
 }
