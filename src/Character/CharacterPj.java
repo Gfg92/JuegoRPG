@@ -5,16 +5,18 @@ import Character.Race.Race;
 import Character.Stat.*;
 import Item.IConsumable;
 
+
 public class CharacterPj implements IDamageable {
     // Atributos
     private String name;
     private Race race;
     private Job job;
-    private Strength strength = new Strength(5);
-    private Dexterity dexterity = new Dexterity(5);
-    private Constitution constitution = new Constitution(5);
-    private Intelligence intelligence = new Intelligence(5);
+    private Strength strength;
+    private Dexterity dexterity;
+    private Constitution constitution;
+    private Intelligence intelligence;
     private double damage;
+
 
 
     //Getters y Setters
@@ -106,6 +108,7 @@ public class CharacterPj implements IDamageable {
         System.out.println(name + " consumed: " + consumable);
         consumable.consumedBy(this);
     }
+
 
 
 

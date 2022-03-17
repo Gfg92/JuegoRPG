@@ -3,6 +3,7 @@ package Item.Food;
 import Character.CharacterPj;
 import Item.IConsumable;
 
+
 public abstract class Food implements IConsumable {
     private double power;
 
