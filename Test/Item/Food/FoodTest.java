@@ -12,7 +12,7 @@ class FoodTest {
 
     @BeforeEach
     void setUp() {
-        food = new FoodMock(5);
+        food = new FoodMock(25);
     }
 
     @Test

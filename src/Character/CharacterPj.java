@@ -110,11 +110,6 @@ public class CharacterPj implements IDamageable {
         consumable.consumedBy(this);
     }
 
-    // Metodos de la interface IEquippable
-    public void acquire(IEquippable equippable){
-        System.out.println(name + " acquired: " + equippable);
-        equippable.equipedBy(this);
-    }
 
 
 
