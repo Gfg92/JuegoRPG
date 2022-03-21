@@ -1,5 +1,6 @@
 package Item.Weapon;
 
+import Character.Stat.Stat;
 import Item.IEquippable;
 import Character.CharacterPj;
 
@@ -23,11 +24,6 @@ public abstract class Weapon implements IEquippable {
         this.value = value;
         this.weight = weight;
     }
-    //Metodos
-    @Override
-    public void equipedBy(CharacterPj character){
-        character.receivesDamage(value);
-    }
-
-
+    // Metodos
+    public abstract int modifier (Stat stat);
 }

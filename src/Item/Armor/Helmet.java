@@ -1,17 +1,17 @@
-package Item.Weapon;
-
+package Item.Armor;
 
 import Character.Stat.Dexterity;
+import Character.Stat.Intelligence;
 import Character.Stat.Stat;
 import Character.Stat.Strength;
 
-public class Katana extends Weapon {
+public class Helmet extends Armor{
     // Atributos
     private String name;
 
     // Constructor
-    public Katana(String name,int value, double weight) {
-        super("Katana",10,20);
+    public Helmet(String name,int value, double weight) {
+        super("Helmet",5,2);
     }
 
     // Metodos
@@ -19,14 +19,14 @@ public class Katana extends Weapon {
     public int modifier (Stat stat){
         int valor = 0;
         if(stat instanceof Strength){
-            valor = 1;
+            valor = 2;
         }
         else if (stat instanceof Dexterity){
             valor = 2;
         }
+        else if (stat instanceof Intelligence){
+            valor = 1;
+        }
         return valor;
     }
-
-
-
 }

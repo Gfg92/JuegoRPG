@@ -1,17 +1,16 @@
-package Item.Weapon;
-
+package Item.Jewelry;
 
 import Character.Stat.Dexterity;
 import Character.Stat.Stat;
 import Character.Stat.Strength;
 
-public class Katana extends Weapon {
+public class Necklace extends Jewelry {
     // Atributos
     private String name;
 
     // Constructor
-    public Katana(String name,int value, double weight) {
-        super("Katana",10,20);
+    public Necklace(String name,int value, double weight) {
+        super("Necklace",5,2);
     }
 
     // Metodos
@@ -22,11 +21,9 @@ public class Katana extends Weapon {
             valor = 1;
         }
         else if (stat instanceof Dexterity){
-            valor = 2;
+            valor = 1;
         }
         return valor;
     }
-
-
 
 }
