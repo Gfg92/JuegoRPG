@@ -5,6 +5,7 @@ import Character.Race.Race;
 import Character.Stat.*;
 import Item.IConsumable;
 import Item.IEquippable;
+import Item.IPickable;
 
 
 public class CharacterPj implements IDamageable {
@@ -110,7 +111,11 @@ public class CharacterPj implements IDamageable {
         consumable.consumedBy(this);
     }
 
-
+    // Metodos de la interface IEquipable
+    public void equippable (IEquippable equippable){
+        System.out.println(name + " equipped: " + equippable);
+        equippable.equippedBy(this);
+    }
 
 
 

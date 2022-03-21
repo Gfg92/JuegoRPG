@@ -2,6 +2,7 @@ package Item.Jewelry;
 
 import Character.Stat.Stat;
 import Item.IEquippable;
+import Character.CharacterPj;
 
 public abstract class Jewelry implements IEquippable {
     // Atributos
@@ -24,4 +25,9 @@ public abstract class Jewelry implements IEquippable {
     }
     // Metodos
     public abstract int modifier (Stat stat);
+
+    @Override
+    public void equippedBy(CharacterPj character) {
+        character.heals(value);
+    }
 }

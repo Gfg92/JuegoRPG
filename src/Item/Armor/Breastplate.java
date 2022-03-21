@@ -1,6 +1,7 @@
 package Item.Armor;
 
 import Character.Stat.*;
+import Character.CharacterPj;
 
 public class Breastplate extends Armor{
     // Atributos
@@ -26,4 +27,5 @@ public class Breastplate extends Armor{
         }
         return valor;
     }
+
 }

@@ -26,4 +26,9 @@ public abstract class Weapon implements IEquippable {
     }
     // Metodos
     public abstract int modifier (Stat stat);
+
+    @Override
+    public void equippedBy(CharacterPj character) {
+        character.heals(value);
+    }
 }

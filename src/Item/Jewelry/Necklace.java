@@ -3,6 +3,7 @@ package Item.Jewelry;
 import Character.Stat.Dexterity;
 import Character.Stat.Stat;
 import Character.Stat.Strength;
+import Character.CharacterPj;
 
 public class Necklace extends Jewelry {
     // Atributos
@@ -25,5 +26,6 @@ public class Necklace extends Jewelry {
         }
         return valor;
     }
+
 
 }
