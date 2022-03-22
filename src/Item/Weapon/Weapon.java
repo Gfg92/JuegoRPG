@@ -31,4 +31,8 @@ public abstract class Weapon implements IEquippable {
     public void equippedBy(CharacterPj character) {
         character.heals(value);
     }
+    @Override
+    public void where(CharacterPj character){
+
+    }
 }

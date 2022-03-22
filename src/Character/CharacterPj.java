@@ -3,9 +3,11 @@ package Character;
 import Character.Job.Job;
 import Character.Race.Race;
 import Character.Stat.*;
+import Item.Armor.Armor;
 import Item.IConsumable;
 import Item.IEquippable;
 import Item.IPickable;
+import Item.Jewelry.Jewelry;
 import Item.Weapon.Weapon;
 
 
@@ -19,6 +21,10 @@ public class CharacterPj implements IDamageable {
     private Constitution constitution;
     private Intelligence intelligence;
     private double damage;
+    private Weapon weapon;
+    private Armor armor;
+    private Jewelry jewelry;
+
 
 
 
@@ -118,6 +124,16 @@ public class CharacterPj implements IDamageable {
         equippable.equippedBy(this);
     }
 
+    public void where(IEquippable equippable) {
+        if(equippable.equals(weapon)){
+            System.out.println("Equipped in your hand");
+        }else {
+            if(equippable.equals(armor) || equippable.equals(jewelry)){
+                System.out.println("Equipped in your body");
+            }
+        }
+
+    }
 
 
     // Imprimir
@@ -135,5 +151,6 @@ public class CharacterPj implements IDamageable {
                 ", Magic: " + magic() +
                 " and Health: " + maxHealth();
     }
+
 
 }
