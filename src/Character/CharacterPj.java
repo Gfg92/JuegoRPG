@@ -6,6 +6,7 @@ import Character.Stat.*;
 import Item.IConsumable;
 import Item.IEquippable;
 import Item.IPickable;
+import Item.Weapon.Weapon;
 
 
 public class CharacterPj implements IDamageable {
