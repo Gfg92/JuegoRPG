@@ -118,22 +118,19 @@ public class CharacterPj implements IDamageable {
         consumable.consumedBy(this);
     }
 
+    // Metodos de la interface IPickable
+    public void pickable(IPickable pickable){
+        System.out.println(name + " pick up: " + pickable);
+        pickable.pickabledBy(this);
+    }
+
     // Metodos de la interface IEquipable
     public void equippable (IEquippable equippable){
         System.out.println(name + " equipped: " + equippable);
         equippable.equippedBy(this);
     }
 
-    public void where(IEquippable equippable) {
-        if(equippable.equals(weapon)){
-            System.out.println("Equipped in your hand");
-        }else {
-            if(equippable.equals(armor) || equippable.equals(jewelry)){
-                System.out.println("Equipped in your body");
-            }
-        }
 
-    }
 
 
     // Imprimir

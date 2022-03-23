@@ -2,9 +2,10 @@ package Item.Food;
 
 import Character.CharacterPj;
 import Item.IConsumable;
+import Item.IPickable;
 
 
-public abstract class Food implements IConsumable {
+public abstract class Food implements IConsumable, IPickable {
     // Atributos
     private double power;
 

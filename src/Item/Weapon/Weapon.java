@@ -3,9 +3,10 @@ package Item.Weapon;
 import Character.Stat.Stat;
 import Item.IEquippable;
 import Character.CharacterPj;
+import Item.IPickable;
 
 
-public abstract class Weapon implements IEquippable {
+public abstract class Weapon implements IEquippable, IPickable {
     // Atributos
     private double value;
     private double weight;
@@ -31,8 +32,5 @@ public abstract class Weapon implements IEquippable {
     public void equippedBy(CharacterPj character) {
         character.heals(value);
     }
-    @Override
-    public void where(CharacterPj character){
 
-    }
 }
