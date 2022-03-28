@@ -1,11 +1,10 @@
 package Item.Jewelry;
 
 import Character.Stat.Stat;
-import Item.IEquippable;
-import Character.CharacterPj;
-import Item.IPickable;
 
-public abstract class Jewelry implements IEquippable, IPickable {
+
+
+public abstract class Jewelry {
     // Atributos
     private double value;
     private double weight;
@@ -26,10 +25,5 @@ public abstract class Jewelry implements IEquippable, IPickable {
     }
     // Metodos
     public abstract int modifier (Stat stat);
-
-    @Override
-    public void equippedBy(CharacterPj character) {
-        character.heals(value);
-    }
 
 }

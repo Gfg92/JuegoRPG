@@ -33,8 +33,5 @@ class StatTest {
         assertEquals(actualValue - 1, stat.getValue());
     }
 
-    @Test
-    void testToString() {
 
-    }
 }

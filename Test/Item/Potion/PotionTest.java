@@ -1,5 +1,6 @@
 package Item.Potion;
 
+import Item.IConsumable;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import Character.CharacterPj;
@@ -20,7 +21,7 @@ class PotionTest {
     void consumedBy() {
         CharacterPj character = new CharacterMock();
         character.receivesDamage(25);
-        character.consumes(potion);
+        character.consumes((IConsumable) potion);
         assertEquals(character.currentHealth(), character.maxHealth());
 
     }
