@@ -125,7 +125,11 @@ public class CharacterPj implements IDamageable {
 
     // Metodos de la interface IPickable
     public void pickUp(IPickable pickable){
-        pickableList.add(pickable);
+        if(this.power() > pickable.getWeight()){
+        pickableList.add(pickable);}
+        else {
+            System.out.println("You can't pick up");
+        }
     }
 
     // Metodos de la interface IEquippable
