@@ -115,6 +115,7 @@ class CharacterTest {
 
     @Test
     void consumes() {
+        character.receivesDamage(5);
         character.consumes(foodMock);
         double currentHealth = character.currentHealth();
         assertEquals(currentHealth, character.currentHealth());
@@ -122,6 +123,7 @@ class CharacterTest {
 
     @Test
     void pickUp() {
+
     }
 
     @Test
