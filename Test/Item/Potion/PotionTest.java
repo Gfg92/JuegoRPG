@@ -14,7 +14,7 @@ class PotionTest {
 
     @BeforeEach
     void setUp() {
-        potion = new PotionMock(25);
+        potion = new PotionMock(25, 5);
     }
 
     @Test

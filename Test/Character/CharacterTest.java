@@ -9,6 +9,7 @@ import Character.Stat.Constitution;
 import Character.Stat.Dexterity;
 import Character.Stat.Intelligence;
 import Character.Stat.Strength;
+import Item.Food.FoodMock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,6 +22,7 @@ class CharacterTest {
     Constitution constitution;
     Intelligence intelligence;
     CharacterPj character;
+    FoodMock foodMock;
 
     @BeforeEach
     void setUp() {
@@ -32,7 +34,9 @@ class CharacterTest {
         dexterity = new Dexterity(5);
         constitution = new Constitution(5);
         intelligence = new Intelligence(5);
+        foodMock = new FoodMock(5,2);
         character = new CharacterPj("Cadiel", raceMock, jobMock, strength, dexterity, constitution, intelligence);
+
     }
 
     @Test
@@ -107,5 +111,20 @@ class CharacterTest {
         character.heals(heals);
         double currentHealth = character.currentHealth();
         assertEquals(currentHealth, character.currentHealth());
+    }
+
+    @Test
+    void consumes() {
+        character.consumes(foodMock);
+        double currentHealth = character.currentHealth();
+        assertEquals(currentHealth, character.currentHealth());
+    }
+
+    @Test
+    void pickUp() {
+    }
+
+    @Test
+    void equippabled() {
     }
 }
