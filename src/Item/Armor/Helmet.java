@@ -1,5 +1,5 @@
 package Item.Armor;
-
+import Character.CharacterPj;
 import Character.Stat.Dexterity;
 import Character.Stat.Intelligence;
 import Character.Stat.Stat;
@@ -28,5 +28,10 @@ public class Helmet extends Armor{
             valor = 1;
         }
         return valor;
+    }
+
+    @Override
+    public void pickedBy(CharacterPj character) {
+        character.pickUp(this);
     }
 }

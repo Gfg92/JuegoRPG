@@ -2,10 +2,10 @@ package Item.Armor;
 
 import Character.Stat.Stat;
 
-import Character.CharacterPj;
+import Item.IPickable;
 
 
-public abstract class Armor {
+public abstract class Armor implements IPickable {
     //Atributos
     private double value;
     private double weight;

@@ -5,4 +5,9 @@ public class MinorHealingPotion extends Potion{
     public MinorHealingPotion(){
         super(25);
     }
+
+    @Override
+    public void pickedBy(CharacterPj character) {
+        character.pickUp(this);
+    }
 }

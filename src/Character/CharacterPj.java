@@ -5,8 +5,12 @@ import Character.Race.Race;
 import Character.Stat.*;
 import Item.Armor.Armor;
 import Item.IConsumable;
+import Item.IPickable;
 import Item.Jewelry.Jewelry;
 import Item.Weapon.Weapon;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class CharacterPj implements IDamageable {
@@ -22,6 +26,7 @@ public class CharacterPj implements IDamageable {
     private Weapon weapon;
     private Armor armor;
     private Jewelry jewelry;
+    private List<IPickable>pickableList = new ArrayList<>();
 
 
 
@@ -115,6 +120,12 @@ public class CharacterPj implements IDamageable {
         System.out.println(name + " consumed: " + consumable);
         consumable.consumedBy(this);
     }
+
+    // Metodos de la interface IPickable
+    public void pickUp(IPickable pickable){
+        pickableList.add(pickable);
+    }
+
 
 
 

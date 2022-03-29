@@ -6,4 +6,8 @@ public class HealingPotion extends Potion{
         super(50);
     }
 
+    @Override
+    public void pickedBy(CharacterPj character) {
+        character.pickUp(this);
+    }
 }

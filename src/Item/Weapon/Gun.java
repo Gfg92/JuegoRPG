@@ -1,7 +1,7 @@
 package Item.Weapon;
 
 import Character.Stat.*;
-
+import Character.CharacterPj;
 public class Gun extends Weapon{
     // Atributos
     private String name;
@@ -21,5 +21,10 @@ public class Gun extends Weapon{
             valor = 2;
         }
         return valor;
+    }
+
+    @Override
+    public void pickedBy(CharacterPj character) {
+        character.pickUp(this);
     }
 }

@@ -4,6 +4,7 @@ package Item.Weapon;
 import Character.Stat.Dexterity;
 import Character.Stat.Stat;
 import Character.Stat.Strength;
+import Character.CharacterPj;
 
 public class Katana extends Weapon {
     // Atributos
@@ -28,5 +29,8 @@ public class Katana extends Weapon {
     }
 
 
-
+    @Override
+    public void pickedBy(CharacterPj character) {
+        character.pickUp(this);
+    }
 }

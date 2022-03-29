@@ -1,9 +1,9 @@
 package Item.Potion;
 import Character.CharacterPj;
+import Item.IPickable;
 
 
-
-public abstract class Potion {
+public abstract class Potion implements IPickable {
     private double power;
 
     public Potion(double power) {

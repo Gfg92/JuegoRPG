@@ -28,4 +28,8 @@ public class Necklace extends Jewelry {
     }
 
 
+    @Override
+    public void pickedBy(CharacterPj character) {
+        character.pickUp(this);
+    }
 }
