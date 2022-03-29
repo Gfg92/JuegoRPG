@@ -5,6 +5,7 @@ import Character.Race.Race;
 import Character.Stat.*;
 import Item.Armor.Armor;
 import Item.IConsumable;
+import Item.IEquippable;
 import Item.IPickable;
 import Item.Jewelry.Jewelry;
 import Item.Weapon.Weapon;
@@ -27,6 +28,7 @@ public class CharacterPj implements IDamageable {
     private Armor armor;
     private Jewelry jewelry;
     private List<IPickable>pickableList = new ArrayList<>();
+    private List<IEquippable>equippableList = new ArrayList<>();
 
 
 
@@ -126,6 +128,10 @@ public class CharacterPj implements IDamageable {
         pickableList.add(pickable);
     }
 
+    // Metodos de la interface IEquippable
+    public void equippabled(IEquippable equippable){
+        equippableList.add(equippable);
+    }
 
 
 

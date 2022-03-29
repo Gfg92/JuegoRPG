@@ -33,4 +33,9 @@ public class Katana extends Weapon {
     public void pickedBy(CharacterPj character) {
         character.pickUp(this);
     }
+
+    @Override
+    public void equippedBy(CharacterPj character) {
+        character.equippabled(this);
+    }
 }

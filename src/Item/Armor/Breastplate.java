@@ -32,4 +32,9 @@ public class Breastplate extends Armor{
     public void pickedBy(CharacterPj character) {
         character.pickUp(this);
     }
+
+    @Override
+    public void equippedBy(CharacterPj character) {
+        character.equippabled(this);
+    }
 }

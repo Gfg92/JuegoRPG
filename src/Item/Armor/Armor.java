@@ -2,10 +2,11 @@ package Item.Armor;
 
 import Character.Stat.Stat;
 
+import Item.IEquippable;
 import Item.IPickable;
 
 
-public abstract class Armor implements IPickable {
+public abstract class Armor implements IPickable, IEquippable {
     //Atributos
     private double value;
     private double weight;

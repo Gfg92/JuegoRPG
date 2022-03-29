@@ -1,10 +1,11 @@
 package Item.Weapon;
 
 import Character.Stat.Stat;
+import Item.IEquippable;
 import Item.IPickable;
 
 
-public abstract class Weapon implements IPickable {
+public abstract class Weapon implements IPickable, IEquippable {
     // Atributos
     private double value;
     private double weight;
