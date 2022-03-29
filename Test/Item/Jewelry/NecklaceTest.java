@@ -17,7 +17,7 @@ class NecklaceTest {
     void setUp(){
         strength = new Strength(5);
         dexterity = new Dexterity(3);
-        jewelry = new Necklace("Necklace", 5, 10);
+        jewelry = new Necklace("Necklace", 5);
     }
 
     @Test

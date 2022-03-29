@@ -12,7 +12,7 @@ public class Katana extends Weapon {
 
     // Constructor
     public Katana(String name,int value, double weight) {
-        super("Katana",10,20);
+        super("Katana",10);
     }
 
     // Metodos
@@ -29,13 +29,4 @@ public class Katana extends Weapon {
     }
 
 
-    @Override
-    public void pickedBy(CharacterPj character) {
-        character.pickUp(this);
-    }
-
-    @Override
-    public void equippedBy(CharacterPj character) {
-        character.equippabled(this);
-    }
 }

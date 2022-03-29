@@ -4,11 +4,8 @@ import Character.CharacterPj;
 public class Apple extends Food{
 
     public Apple() {
-        super(5);
+        super(5, 0.1);
     }
 
-    @Override
-    public void pickedBy(CharacterPj character) {
-        character.pickUp(this);
-    }
+
 }

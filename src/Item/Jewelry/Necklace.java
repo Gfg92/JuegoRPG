@@ -8,10 +8,9 @@ import Character.CharacterPj;
 public class Necklace extends Jewelry {
     // Atributos
     private String name;
-
     // Constructor
-    public Necklace(String name,int value, double weight) {
-        super("Necklace",5,2);
+    public Necklace(String name, double weight) {
+        super("Necklace",5);
     }
 
     // Metodos
@@ -28,13 +27,4 @@ public class Necklace extends Jewelry {
     }
 
 
-    @Override
-    public void pickedBy(CharacterPj character) {
-        character.pickUp(this);
-    }
-
-    @Override
-    public void equippedBy(CharacterPj character) {
-        character.equippabled(this);
-    }
 }

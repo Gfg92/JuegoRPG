@@ -8,7 +8,7 @@ public class Gun extends Weapon{
 
     //Constructor
     public Gun (String name,int value, double weight) {
-        super("Walther", 10, 5);
+        super("Walther", 10);
     }
     // Metodos
     @Override
@@ -23,13 +23,5 @@ public class Gun extends Weapon{
         return valor;
     }
 
-    @Override
-    public void pickedBy(CharacterPj character) {
-        character.pickUp(this);
-    }
 
-    @Override
-    public void equippedBy(CharacterPj character) {
-        character.equippabled(this);
-    }
 }

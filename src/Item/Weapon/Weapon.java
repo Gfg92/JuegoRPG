@@ -5,23 +5,21 @@ import Item.IEquippable;
 import Item.IPickable;
 
 
-public abstract class Weapon implements IPickable, IEquippable {
+public abstract class Weapon implements IEquippable {
     // Atributos
-    private double value;
+
     private double weight;
 
     // Getters y Setters
-    public double getValue() {
-        return value;
-    }
+
 
     public double getWeight() {
         return weight;
     }
 
     //Constructor
-    public Weapon(String name, double value, double weight) {
-        this.value = value;
+    public Weapon(String name, double weight) {
+
         this.weight = weight;
     }
     // Metodos

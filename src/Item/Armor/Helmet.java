@@ -30,13 +30,5 @@ public class Helmet extends Armor{
         return valor;
     }
 
-    @Override
-    public void pickedBy(CharacterPj character) {
-        character.pickUp(this);
-    }
 
-    @Override
-    public void equippedBy(CharacterPj character) {
-        character.equippabled(this);
-    }
 }
