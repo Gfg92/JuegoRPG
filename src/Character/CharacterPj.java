@@ -136,8 +136,6 @@ public class CharacterPj implements IDamageable {
 
 
 
-
-
     // Imprimir
     @Override
     public String toString() {
