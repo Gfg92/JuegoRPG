@@ -101,7 +101,7 @@ class CharacterTest {
         double damage = 100;
         character.receivesDamage(damage);
         double currentHealth = character.currentHealth();
-        assertEquals(currentHealth, character.currentHealth());
+        assertEquals(25, currentHealth);
 
     }
 
@@ -110,7 +110,7 @@ class CharacterTest {
         double heals = 100;
         character.heals(heals);
         double currentHealth = character.currentHealth();
-        assertEquals(currentHealth, character.currentHealth());
+        assertEquals(currentHealth, character.maxHealth());
     }
 
     @Test
@@ -118,15 +118,8 @@ class CharacterTest {
         character.receivesDamage(5);
         character.consumes(foodMock);
         double currentHealth = character.currentHealth();
-        assertEquals(currentHealth, character.currentHealth());
+        assertEquals(currentHealth, character.maxHealth());
     }
 
-    @Test
-    void pickUp() {
 
-    }
-
-    @Test
-    void equippabled() {
-    }
 }

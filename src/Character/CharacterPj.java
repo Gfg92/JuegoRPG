@@ -128,7 +128,7 @@ public class CharacterPj implements IDamageable {
         if(this.power() > pickable.getWeight()){
         pickableList.add(pickable);}
         else {
-            System.out.println("You can't pick up");
+            System.out.println("You don't have enough strength");
         }
     }
 

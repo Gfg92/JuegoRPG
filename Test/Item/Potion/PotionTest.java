@@ -11,17 +11,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class PotionTest {
 
     Potion potion;
+    CharacterPj character;
 
     @BeforeEach
     void setUp() {
-        potion = new PotionMock(25, 5);
+        potion = new PotionMock(25,5);
+        character = new CharacterMock();
     }
 
     @Test
     void consumedBy() {
-        CharacterPj character = new CharacterMock();
         character.receivesDamage(25);
-        character.consumes((IConsumable) potion);
+        character.consumes(potion);
         assertEquals(character.currentHealth(), character.maxHealth());
 
     }

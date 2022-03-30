@@ -9,15 +9,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FoodTest {
     Food food;
-
+    CharacterPj character;
     @BeforeEach
     void setUp() {
         food = new FoodMock(25, 5);
+        character = new CharacterMock();
     }
 
     @Test
     void consumedBy() {
-        CharacterPj character = new CharacterMock();
         character.receivesDamage(25);
         character.consumes(food);
         assertEquals(character.currentHealth(), character.maxHealth());
